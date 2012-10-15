@@ -16,18 +16,18 @@
 $.fn.fontShrinkToFit = function(settings) {
 
 	var settings = $.extend( {
-		'maxHeight'		: null,	// eg "400" pixels.  if using this setting, be sure to set 'maxLines' to null or a value higher than 1.
-		'maxLines' 		: 1,	// maximum number of lines to wrap text on to.  set to null to ignore this directive
+		'maxHeight'	: null,	// eg "400" pixels.  if using this setting, be sure to set 'maxLines' to null or a value higher than 1.
+		'maxLines' 	: 1,	// maximum number of lines to wrap text on to.  set to null to ignore this directive
 		'fontSizeType'	: 'px', // 'px', 'em', 'pt'
-		'shrinkBy'		: 1, 	// units to incrementally reduce font size by.  eg "1" pixel or ".1" em
+		'shrinkBy'	: 1, 	// units to incrementally reduce font size by.  eg "1" pixel or ".1" em
 		'minFontSize'	: 10,	// eg "10" pixels or "0.5" em -- the function will stop reducing the font once it gets to this size
 		'maxAttempts'	: 50	// number of incremental attempts to reduce the size before stopping
     }, settings);
 
     return this.each(function() {  
 		var block = $(this),
-			lineHeight = false,
-			f = function(attempt){
+		lineHeight = false,
+		f = function(attempt){
 			
 			var blockText = block.html(),
 				currentFont = parseInt( block.css("font-size")),
