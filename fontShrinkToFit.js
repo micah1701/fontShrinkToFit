@@ -25,7 +25,7 @@ $.fn.fontShrinkToFit = function(settings) {
 		'maxAttempts'	: 50,	 // number of incremental attempts to reduce the size before stopping
 		'allToSmallest'	: false,  // if being applied to multiple elements, shrink all elements to match the smallest one
 		'callback'	: function(){ return true; }, // custom function that triggers when fontShrinkToFit() is finished with each element
-		'finished'	: function(){ return ture; }  // custom function that triggers when fontShrinkToFit() has finished running
+		'finished'	: function(){ return true; }  // custom function that triggers when fontShrinkToFit() has finished running
     }, settings);
 
     var smallestFont = 99999,
